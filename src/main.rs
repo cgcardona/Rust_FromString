@@ -37,11 +37,11 @@ fn main() {
     let pie: f32 = "3.14".parse::<f32>().unwrap();
     println!("{:#?}", pie);
 
-    // &str to String
+    // &str to String w/ turbofish
     let foo: String = "j".parse::<String>().unwrap();
     println!("{:#?}", foo);
 
-    // &str to SocketAddr
+    // &str to SocketAddr from TcpStream::connect
     let addr: SocketAddr = "127.0.0.1:3000".parse().unwrap();
     let connect_future: ConnectFuture = TcpStream::connect(&addr);
     println!("{:#?}", connect_future);
